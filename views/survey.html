@@ -71,16 +71,16 @@
                   Your city
                  </label>
                  <select class="select form-control" id="select" name="select">
-                  <option value="Nairobi">
+                  <option value="Buenos Aires">
                    Buenos Aires
                   </option>
-                  <option value="Mombasa">
+                  <option value="New York">
                    New York
                   </option>
-                  <option value="Nakuru">
+                  <option value="Narnia">
                    Narnia
                   </option>
-                  <option value="Kisumu">
+                  <option value="Other">
                    Other
                   </option>
                  </select>
@@ -108,10 +108,10 @@
                 </div>
                 <div class="form-group">
                  <div>
-                  <button class="btn btn-primary " name="submit" type="submit">
+                  <button class="btn btn-primary button-submit" name="submit" type="submit">
                    Submit
                   </button>
-                  <button class="btn btn-secondary" type="reset">Reset</button>
+                  <button class="btn btn-secondary button-reset" type="reset">Reset</button>
                  </div>
                 </div>
                </form>
@@ -120,14 +120,18 @@
             </div>
 
   
+    <!-- Place the visit tag below the comment -->
     <script>
-      //Script for displaying slider value
-      var slider = document.getElementById("myRange");
-      var output = document.getElementById("range-num");
-      output.innerHTML = slider.value;
-      slider.oninput = function() {
-        output.innerHTML = this.value;
-      };
+      // place the action tag for the reset button inside of the function
+    </script>
+    <script>
+      //place the action tag for the submit button inside of the fuction below the console.log
+      const submitButton = document.querySelector('.button-submit');
+
+      submitButton.addEventListener('click', function() {
+  
+    console.log('Button submit button clicked!');
+    });
     </script>
   </body>
 </html>
