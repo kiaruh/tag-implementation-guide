@@ -38,6 +38,9 @@ app.get("/confirmation", (req, res) => {
 app.get("/survey", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views", "survey.html"));
 });
+app.post("/survey", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views", "survey.html"));
+});
 app.get("/info", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views", "info.html"));
 });

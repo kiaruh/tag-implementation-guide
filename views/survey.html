@@ -108,7 +108,7 @@
                 </div>
                 <div class="form-group">
                  <div>
-                  <button class="btn btn-primary button-submit" name="submit" type="submit">
+                  <button class="btn btn-primary button-submit" >
                    Submit
                   </button>
                   <button class="btn btn-secondary button-reset" type="reset">Reset</button>
@@ -126,12 +126,31 @@
     </script>
     <script>
       //place the action tag for the submit button inside of the fuction below the console.log
-      const submitButton = document.querySelector('.button-submit');
-
-      submitButton.addEventListener('click', function() {
-  
-    console.log('Button submit button clicked!');
-    });
+      const submitButton = document.querySelector('.button-reset');
+      function clickResetButton() {
+        console.log('Button reset button clicked!');
+        var _tvq = window._tvq = window._tvq || [];
+        (function() {
+            var u = (("https:" == document.location.protocol) ? "https://collector-0000.us.tvsquared.com/" : "http://collector-0000.us.tvsquared.com/");
+            _tvq.push(['setSiteId', "TV-6354363681-1"]);
+            _tvq.push(['setTrackerUrl', u + 'tv2track.php']);
+            _tvq.push([function() {
+                this.deleteCustomVariable(5, 'page')
+            }
+            ]);
+            _tvq.push(['trackPageView']);
+            var d = document
+              , g = d.createElement('script')
+              , s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.defer = true;
+            g.async = true;
+            g.src = u + 'tv2track.js';
+            s.parentNode.insertBefore(g, s);
+        }
+        )()
+      };
+      submitButton.addEventListener('click',clickResetButton)
     </script>
   </body>
 </html>
